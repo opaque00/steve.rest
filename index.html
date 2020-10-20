@@ -1,0 +1,122 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134041866-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-134041866-2');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>kanye.rest</title>
+    <meta name="description" content="A free REST API for random Kanye West quotes">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="static/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="static/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="static/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="static/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="static/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="static/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="static/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="static/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="static/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="static/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="static/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="kanye.rest">
+    <meta property="og:site_name" content="kanye.rest">
+    <meta property="og:url" content="https://kanye.rest">
+    <meta property="og:description" content="A free REST API for random Kanye West quotes">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kanye.rest/static/apple-icon.png">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@ajzbc">
+    <meta name="twitter:url" content="https://kanye.rest">
+    <meta name="twitter:title" content="kanye.rest">
+    <meta name="twitter:description" content="A free REST API for random Kanye West quotes">
+    <meta name="twitter:image" content="https://kanye.rest/static/apple-icon.png">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/chota.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/carbon.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-left">
+                <a class="brand" href="../">🌊 kanye.rest</a>
+            </div>
+            <!-- <div class="nav-right">
+                <a class="button clear no-top noselect" href="https://www.buymeacoffee.com/ajzbc" target="_blank">☕️ Buy
+                    Me A Coffee!</a>
+            </div> -->
+        </nav>
+        <div class="inner">
+            <p>A free REST API for random Kanye West quotes (Kanye as a Service)</p>
+            <h3 class="title">API Usage</h3>
+            <div class="section">
+                <div class="row">
+                    <div class="col is-full is-marginless">
+                        <p class="demo is-center">GET&nbsp<a href="https://api.kanye.rest" target="_blank">https://api.kanye.rest</a></p>
+                    </div>
+                    <div class="col is-full is-marginless is-center">
+                        <a class="button clear no-top noselect" id="tweet" target="_blank">📢 Tweet</a>
+                        <a class="button clear no-top noselect" onclick="getQuote()">🔄 Refresh</a>
+                    </div>
+                </div>
+                <code>{<div class="tab">"quote": "<span id="quote"></span>"</div>}</code>
+                <br>
+                <p class="extra">Extra: <a href="https://api.kanye.rest?format=text" target="_blank">https://api.kanye.rest?format=text</a></p>
+            </div>
+
+            <!-- <div id="codefund">
+            </div>
+            <script src="https://codefund.io/properties/192/funder.js" async="async"></script> -->
+
+            <div class="is-center">
+                <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CE7D5K7M&placement=kanyerest" id="_carbonads_js"></script>
+            </div>
+
+            <h3 class="title">FAQ</h3>
+            <div class="section">
+                <b>Can I use this in my project?</b>
+                <p>Yes. Do what ever you want with it! <a href="https://twitter.com/ajzbc" target="_blank">Let me know
+                        what you make!</a></p>
+                <b>Is the API rate limited?</b>
+                <p>No, but be generous.</p>
+                <b>Is it open source? Can I contribute?</b>
+                <p>Yes! Checkout my spaghetti code on github. <a href="https://github.com/ajzbc/kanye.rest" target="_blank">API</a> <a href="https://github.com/ajzbc/kanye.rest/tree/gh-pages"
+                        target="_blank">Site</a></p>
+                <b>Can I use this to brighten my git commit messages?</b>
+                <p>Yes. First create the following alias and use `git yolo`. Use at own risk.</p>
+                <code><div class="tab">git config --global alias.yolo '!git commit -m "$(curl -s api.kanye.rest/?format=text)"'</div></code>
+            </div>
+
+            <footer>
+                <p id="stat">...</p>
+                <p>👋 Made by <a href="https://ajzbc.com" target="_blank">Andrew Jazbec</a> <a href="https://twitter.com/ajzbc" target="_blank">@ajzbc</a></p>
+                <p><a href="https://github.com/ajzbc/kanye.rest" target="_blank"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ajzbc/kanye.rest?style=social"></a></p>
+                <i class="wavy">Stay wavy 🌊</i>
+            </footer>
+
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
